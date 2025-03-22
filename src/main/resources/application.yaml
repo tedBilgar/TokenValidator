@@ -1,0 +1,13 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8091/realms/master
+
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: DEBUG
+    org.springframework.web.reactive.function.client.ExchangeFunctions: DEBUG
+    org.apache.http: DEBUG  # Логирование Apache HttpClient (если используется)
+    org.springframework.security.oauth2: DEBUG  # Логирование работы Spring Security с OAuth2
